@@ -1,0 +1,9 @@
+//Background images animation
+@keyframes scale-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}

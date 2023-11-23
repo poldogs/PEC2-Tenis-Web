@@ -1,0 +1,88 @@
+@import '../mixins';
+@import '../animations';
+@import '../variables';
+
+.collage {
+  @include custom-gradient($primary-color, $secondary-color);
+  padding: 20px;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    min-height: 600px;
+  }
+
+  .title,
+  .contact,
+  .members,
+  .blog {
+    position: relative;
+    overflow: hidden;
+
+    h1, 
+    h2 {
+        @include absolute-center;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      transition: transform 0.5s ease-in-out; 
+      transform-origin: center; 
+      z-index: -1; 
+    }
+
+    &:hover::before {
+      transform: scale(1.1); 
+    }
+
+    &::after {
+      content: ''; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($primary-color, 0.5);
+      z-index: -1;
+    }
+
+    color: white;
+    z-index: 1; 
+  }
+
+  .title {
+    grid-column: span 2;
+    grid-row: span 1;
+
+    &::before {
+      background-image: url('https://www.shutterstock.com/image-photo/random-tennis-ball-background-260nw-9688501.jpg');
+    }
+  }
+
+  .contact {
+    grid-column: span 1;
+    grid-row: span 2;
+
+    &::before {
+      background-image: url('https://www.shutterstock.com/image-photo/random-tennis-ball-background-260nw-9688501.jpg');
+    }
+  }
+
+  .members,
+  .blog {
+    grid-column: span 1;
+    grid-row: span 1;
+
+    &::before {
+      background-image: url('https://www.shutterstock.com/image-photo/random-tennis-ball-background-260nw-9688501.jpg');
+    }
+  }
+}

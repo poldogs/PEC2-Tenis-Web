@@ -1,0 +1,12 @@
+// Gradient effect
+@mixin custom-gradient($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+}
+
+// Center any element
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,48 @@
+@import '../mixins';
+@import '../animations';
+@import '../variables';
+
+header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Add a subtle shadow to the header
+    padding: 15px 30px; // Add padding to the header
+    @include custom-gradient($primary-color, $secondary-color);
+    
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;  
+      
+      color: white;
+      padding: 10px;
+  
+      .navbar-brand {
+        color: white;
+        img {
+          filter: invert(1);
+        }
+      }
+  
+      .navbar-nav {
+        margin-left: auto;
+  
+        .nav-item {
+            padding: 0.5rem 1rem; // Add padding to the navigation links
+
+          a {
+            color: white;
+          }
+  
+          &.active {
+            a {
+              background-color: white;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+  
+      .navbar-brand:hover {
+        color: white !important;
+      }
+    }
+  }
