@@ -29,3 +29,93 @@
 /**
  * Do NOT include anything else in this file!
  */
+
+
+ @mixin zoom-hover {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title-1 {
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/08/19/04/tennis-5018589_640.jpg");
+    background-size: cover;
+    color: white;
+  
+    h1 {
+      font-size: 3em;
+    }
+  
+    .subtitle {
+      font-size: 1.5em;
+    }
+  }
+  
+  .title-2 {
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/08/19/04/tennis-5018589_640.jpg");
+    background-size: cover;
+    color: white;
+  
+    h2 {
+      font-size: 2em;
+    }
+  }
+  
+  .members {
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/08/19/04/tennis-5018589_640.jpg");
+    background-size: cover;
+    color: white;
+  
+    h2 {
+      font-size: 2em;
+    }
+  }
+  
+  .blog {
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/08/19/04/tennis-5018589_640.jpg");
+    background-size: cover;
+    color: white;
+  
+    h2 {
+      font-size: 2em;
+    }
+  }
+  
+  .title-3 {
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/08/19/04/tennis-5018589_640.jpg");
+    background-size: cover;
+    color: white;
+  
+    h2 {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .collage {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+  }
+  
+  .collage > div {
+    @supports (display: grid) {
+      &:hover {
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+      }
+    }
+  
+    &:hover {
+      @include zoom-hover;
+    }
+  }
