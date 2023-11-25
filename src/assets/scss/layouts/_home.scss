@@ -22,8 +22,13 @@
     overflow: hidden;
 
     h1, 
-    h2 {
-        @include absolute-center;
+    h2, 
+    div {
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        margin-top: 4rem;
     }
 
     &::before {
@@ -63,7 +68,7 @@
     grid-row: span 1;
 
     &::before {
-      background-image: url('https://www.shutterstock.com/image-photo/random-tennis-ball-background-260nw-9688501.jpg');
+      background-image: url('/src/assets/images/image_title.avif');
     }
   }
 
@@ -72,17 +77,31 @@
     grid-row: span 2;
 
     &::before {
-      background-image: url('https://www.shutterstock.com/image-photo/random-tennis-ball-background-260nw-9688501.jpg');
+      background-image: url('/src/assets/images/image_contact.avif');
     }
   }
 
-  .members,
+  .members {
+    grid-column: span 1;
+    grid-row: span 1;
+
+    &::before {
+      background-image: url('/src/assets/images/image_members2.webp');
+    }
+  }
+
   .blog {
     grid-column: span 1;
     grid-row: span 1;
 
     &::before {
-      background-image: url('https://www.shutterstock.com/image-photo/random-tennis-ball-background-260nw-9688501.jpg');
+      background-image: url('/src/assets/images/image_blog.jpg');
     }
   }
+}
+
+.custom-title {
+    font-family: $font-family-roboto;
+    font-weight: $font-weight-bold;
+    font-style: italic;
 }

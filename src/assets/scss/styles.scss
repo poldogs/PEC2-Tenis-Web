@@ -11,6 +11,8 @@
 @import "mixins";
 @import "animations";
 @import "bootstrap/scss/bootstrap";
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/solid.css';
+
 /**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/

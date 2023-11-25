@@ -3,20 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenis</title>
+  <title>Tennis Legends League</title>
   <link rel="stylesheet" href="/src/assets/scss/styles.scss">
+  <link rel="icon" href="/src/assets/images/favicon.ico" type="image/x-icon">
   <script type="module" src="/src/assets/js/main.js"></script>
 </head>
 <body>
-  <include src="views/header.html"></include>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand custom-title" href="/src/index.html">
+        <img src="/src/assets/images/tenis_logo.svg" alt="TenisLL" width="30" height="24">
+        Tennis Legends League
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="members.html">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <section class="collage">
       <div class="grid">
         <!-- Primera fila -->
         <div class="title">
-          <h1>Tennis Legends League</h1>
-          <div class="subtitle">Join the best Tennis League in Malaga. With hundreds of participants.</div>
+          <h1 class="custom-title">Tennis Legends League</h1>
+          <div class="subtitle"><b><i>Join the best Tennis League in Malaga. With hundreds of participants.</i></b></div>
         </div>
         <div class="contact">
           <h2>Join Us!</h2>
@@ -26,22 +51,19 @@
         <div class="members">
           <h2>Members</h2>
           <div class="see-more">
-            See More
+            See More<i class="fa-solid fa-arrow-right"></i></i>
             <i class="eye-icon"></i>
           </div>
         </div>
         <div class="blog">
           <h2>Blog</h2>
           <div class="see-more">
-            See More
+            See More<i class="fa-solid fa-arrow-right"></i></i>
             <i class="eye-icon"></i>
           </div>
         </div>
       </div>
     </section>
-
-
-    <div style="height: 1000px; background-color: #f8f9fa;"></div>
   </main>
   
   <include src="views/footer.html"></include>

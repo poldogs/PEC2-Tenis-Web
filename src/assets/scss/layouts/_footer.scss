@@ -1,0 +1,47 @@
+footer {
+    
+    text-align: center;
+    @include custom-gradient($primary-color, $secondary-color);
+
+
+    .row{
+        max-width: 100%;
+    }
+
+    .contact-info{
+        padding-top: 30px
+    }
+
+    .contact-info, .logo, .pages, .social {
+      @include darken-effect(white);
+      margin-bottom: 20px;
+    }
+  
+    .separator {
+      margin: 0 auto;
+      width: 50%;
+      border: 2px solid white;
+      margin-bottom: 30px;
+    }
+  
+    .logo img {
+      color: white;
+      filter: invert(1);
+    }
+  
+    .pages a {
+      margin: 0 15px;
+      text-decoration: none; 
+      color: inherit; 
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .social {
+        i {
+            margin: 0 10px;
+        }
+    }
+  }
+  

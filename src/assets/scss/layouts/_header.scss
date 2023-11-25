@@ -1,5 +1,4 @@
 @import '../mixins';
-@import '../animations';
 @import '../variables';
 
 header {
@@ -26,19 +25,23 @@ header {
         margin-left: auto;
   
         .nav-item {
-            padding: 0.5rem 1rem; // Add padding to the navigation links
-
-          a {
-            color: white;
-          }
-  
-          &.active {
+            padding: 0.5rem 1rem;
+            @include border-effect(white); // Utiliza el mixin 'border' en lugar de 'border'
+        
             a {
+              color: white;
+            }
+        
+            &.active {
               background-color: white;
-              color: $primary-color;
+              @include border-effect($primary-color);
+        
+              a {
+                color: $primary-color;
+              }
             }
           }
-        }
+        
       }
   
       .navbar-brand:hover {
