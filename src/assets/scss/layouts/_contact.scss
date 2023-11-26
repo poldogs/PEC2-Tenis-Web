@@ -1,0 +1,32 @@
+.form-section{
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+      
+        @media (max-width: 400px) {
+            max-width: 90%;
+            margin: 30px auto;
+        }
+
+        h1 {
+          margin-bottom: 30px;
+          text-align: center;
+        }
+      
+        form {
+          .form-group {
+            margin-bottom: 20px;
+          }
+      
+          textarea {
+            resize: vertical;
+          }
+      
+          button {
+            display: block;
+            margin-top: 20px;
+          }
+        }
+    }
+      
+}

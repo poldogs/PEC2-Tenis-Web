@@ -36,8 +36,39 @@
   </header>
 
   <main>
-    CONTACT
-    <div style="height: 1000px; background-color: #f8f9fa;"></div>
+    <section class="form-section">
+      <div class="container">
+          <h1 class="custom-title">Join Us!</h1>
+          <form id="contactForm" name="contact" method="POST" data-netlify="true">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone:</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                  <label for="skill-level">Skill Level:</label>
+                  <select class="form-control" id="skill-level" name="skill-level" required>
+                      <option value="" disabled selected>Select your skill level</option>
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">Intermediate</option>
+                      <option value="advanced">Advanced</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+  </section>  
   </main>
   
   <include src="views/footer.html"></include>

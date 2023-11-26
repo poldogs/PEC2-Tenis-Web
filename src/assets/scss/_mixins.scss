@@ -13,14 +13,17 @@
 
 // Effect and style for borders
 @mixin border-effect($color) {
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     border: 2px solid $color;
-    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   
     &:hover {
+      // stylelint-disable-next-line scss/no-global-function-names
       border-color: darken($color, 20%);
+      // stylelint-disable-next-line scss/no-global-function-names
       color: darken($color, 20%);
     }
 }
+
   
 // Effect that darkens elements inside
 @mixin darken-effect($color) {

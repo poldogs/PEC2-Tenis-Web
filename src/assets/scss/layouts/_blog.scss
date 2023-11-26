@@ -1,22 +1,28 @@
-// styles.scss
-
 .blog-article {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
   
+    @media (max-width: 768px) {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+    
+      // Estilo para pantallas muy pequeñas
+    @media (max-width: 576px) {
+        max-width: 100%;
+        margin: 5px auto;
+        padding: 10px;
+    }
+
     img {
       width: 100%;
       margin-bottom: 15px;
     }
   
-    h2 {
-      color: #333;
-    }
-  
     ul {
-      list-style: none;
-      padding: 0;
+        padding: 20px;
+        list-style: none;
   
       li {
         margin-bottom: 10px;
@@ -24,29 +30,29 @@
     }
   
     hr {
-      border: 1px solid $primary-color;
-      margin: 20px 0;
+        margin: 20px auto;
+        border: 1px solid $primary-color;
     }
   
     blockquote {
-      background-color: #f9f9f9;
-      border-left: 5px solid #333;
-      padding: 10px;
       margin: 0;
+      padding: 10px;
+      border-left: 5px solid #333;
+      background-color: #f9f9f9;
     }
   
     // Utilizando la pseudoclase :has() para aplicar estilos a párrafos que siguen directamente a una imagen
     .article-header, .col-lg-6:has(img + p) {
         p {
-          font-style: italic;
-          font-size: 12px;
+            font-size: 12px;
+            font-style: italic;
         }
-      }
+    }
       
 
   // Utilizando la pseudoclase :is() para aplicar estilos a elementos de lista con una clase específica
   .image-source:is(p) {
-    color: $secondary-color; // Adjust the color as needed
+    color: $secondary-color;
     overflow-wrap: break-word;
   }
 }
